@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 var foodSchema = new Schema({
   name: String,
-  price: String
+  price: Number
 });
 
 var Food = mongoose.model('food', foodSchema);

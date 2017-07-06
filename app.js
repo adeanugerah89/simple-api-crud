@@ -1,5 +1,9 @@
 'use strict'
 //All Dependencies
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/restaurants_ade');
+
+
 const express = require('express'),
       path = require('path'),
       logger = require('morgan'),
@@ -9,6 +13,7 @@ const express = require('express'),
       //All Route Files
       routes = require('./routes/index'),
       users = require('./routes/users'),
+      food = require('./routes/food'),
 
       //Express Instance
       app = express();
@@ -23,6 +28,7 @@ app.use(cookieParser());
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/food', food);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
