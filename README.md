@@ -19,3 +19,6 @@
 | /restaurants     | POST   | create data     |
 | /restaurants/:id | DELETE | delete one data |
 | /restaurants/:id | PUT    | update one data |
+
+## to run app
+first run Mongodb in terminal: "sudo service mongod star" and then "npm start" (nodemo) to run app.
